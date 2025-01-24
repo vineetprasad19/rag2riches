@@ -8,7 +8,7 @@ Scala with Spark
 . Performance: Tends to be faster than PySpark because it's compiled to JVM bytecode.
 . Community: Rich ecosystem of libraries, especially in functional programming.
 . Usage:
-
+/**************************************************************************/
 import org.apache.spark.sql.SparkSession
 
 val spark = SparkSession.builder
@@ -18,15 +18,14 @@ val spark = SparkSession.builder
 val data = Seq((1, "Alice"), (2, "Bob"), (3, "Charlie"))
 val df = spark.createDataFrame(data).toDF("id", "name")
 df.show()
-
+/**************************************************************************/
 PySpark (Python with Spark)
 . Ease of Use: Python is more user-friendly and widely known, making it easier for beginners to work with PySpark.
 . Popularity: Great for data scientists and engineers familiar with Python libraries like Pandas, NumPy, and Scikit-learn.
 . Community: Extensive community support due to Python’s popularity.
 . Performance: Slower compared to Scala because it runs through Py4J to communicate with the JVM.
 . Usage:
-
-
+/**************************************************************************/
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
@@ -36,7 +35,7 @@ spark = SparkSession.builder \
 data = [(1, "Alice"), (2, "Bob"), (3, "Charlie")]
 df = spark.createDataFrame(data, ["id", "name"])
 df.show()
-
+/**************************************************************************/
 Choosing Between Scala and PySpark
 1. Performance: Use Scala for performance-critical applications.
 2. Ease of Learning: Use PySpark if you're more comfortable with Python or for quick prototyping.
